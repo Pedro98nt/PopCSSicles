@@ -1,0 +1,294 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, #ffffff, #fffe9b);
+}
+body #frame {
+  position: relative;
+  width: 70vw;
+  height: 70vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 12.5vw;
+  grid-row-gap: 3vw;
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in-out 1 forwards;
+          animation: fadeIn 3s ease-in-out 1 forwards;
+}
+@-webkit-keyframes fadeIn {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .popwrap {
+  position: relative;
+  -webkit-transform: translateX(5vw) rotate(15deg) scaleX(-1) scale(1.15);
+          transform: translateX(5vw) rotate(15deg) scaleX(-1) scale(1.15);
+  -webkit-animation: backnforth 3s ease-in-out infinite alternate;
+          animation: backnforth 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes backnforth {
+  to {
+    -webkit-transform: translateX(5vw) rotate(-15deg) scaleX(-1) scale(1.15);
+            transform: translateX(5vw) rotate(-15deg) scaleX(-1) scale(1.15);
+  }
+}
+@keyframes backnforth {
+  to {
+    -webkit-transform: translateX(5vw) rotate(-15deg) scaleX(-1) scale(1.15);
+            transform: translateX(5vw) rotate(-15deg) scaleX(-1) scale(1.15);
+  }
+}
+body .popwrap:nth-of-type(4) {
+  -webkit-animation: backnforth5 3s ease-in-out infinite alternate;
+          animation: backnforth5 3s ease-in-out infinite alternate;
+  -webkit-transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+          transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+}
+@-webkit-keyframes backnforth5 {
+  to {
+    -webkit-transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+            transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+  }
+}
+@keyframes backnforth5 {
+  to {
+    -webkit-transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+            transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+  }
+}
+body .popwrap:nth-of-type(5) {
+  -webkit-animation: backnforth5 3s ease-in-out infinite alternate;
+          animation: backnforth5 3s ease-in-out infinite alternate;
+  -webkit-transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+          transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+}
+@keyframes backnforth5 {
+  to {
+    -webkit-transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+            transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+  }
+}
+body .popwrap:nth-of-type(6) {
+  -webkit-animation: backnforth5 3s ease-in-out infinite alternate;
+          animation: backnforth5 3s ease-in-out infinite alternate;
+  -webkit-transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+          transform: translateX(-5vw) rotate(15deg) scaleX(-1) scale(1.15);
+}
+@keyframes backnforth5 {
+  to {
+    -webkit-transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+            transform: translateX(-5vw) rotate(-15deg) scaleX(-1) scale(1.35);
+  }
+}
+body .popwrap:after {
+  content: '';
+  position: absolute;
+  width: 1.5vw;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 2.5vw 0 0 rgba(0, 0, 0, 0.1), -2.5vw 0 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+  z-index: 10;
+  left: 50%;
+  top: 15%;
+  -webkit-animation: backnforth4 3s ease-in-out infinite alternate;
+          animation: backnforth4 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes backnforth4 {
+  to {
+    -webkit-transform: translateX(-1.15vw);
+            transform: translateX(-1.15vw);
+  }
+}
+@keyframes backnforth4 {
+  to {
+    -webkit-transform: translateX(-1.15vw);
+            transform: translateX(-1.15vw);
+  }
+}
+body .popwrap:before {
+  content: '';
+  position: absolute;
+  width: 2vw;
+  height: 50%;
+  bottom: 0;
+  z-index: 0;
+  left: calc(50% - 1vw);
+  background: -webkit-gradient(linear, right top, left top, from(#e9dfc4), color-stop(1%, #e9dfc4), color-stop(2%, #ede3c8), color-stop(24%, #ede3c8), color-stop(25%, #ebddc3), color-stop(48%, #e9dfc4), color-stop(49%, #ebddc3), color-stop(52%, #e6d8bd), color-stop(53%, #e6d8bd), color-stop(54%, #e9dbc0), color-stop(55%, #e6d8bd), color-stop(56%, #e6d8bd), color-stop(57%, #e9dbc0), color-stop(58%, #e6d8bd), color-stop(73%, #e6d8bd), color-stop(74%, #e9dbc0), color-stop(98%, #e9dbc0), to(#ebddc3));
+  background: linear-gradient(to left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+  border-radius: 0 0 50vw 50vw;
+  box-shadow: inset 0.25vw 0 0 rgba(0, 0, 0, 0.15);
+  -webkit-animation: backnforth3 3s ease-in-out infinite alternate;
+          animation: backnforth3 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes backnforth3 {
+  to {
+    box-shadow: inset -0.25vw 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+@keyframes backnforth3 {
+  to {
+    box-shadow: inset -0.25vw 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+body .popwrap:nth-of-type(even) {
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+body .popwrap:nth-of-type(even):before, body .popwrap:nth-of-type(even):after {
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+body .popwrap:nth-of-type(even):after {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 2.5vw 0 0 rgba(0, 0, 0, 0.3), -2.5vw 0 0 rgba(0, 0, 0, 0.3);
+}
+body .popwrap:nth-of-type(even) .inner:before {
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+body .popwrap:nth-of-type(even) .inner .cell:before {
+  background: radial-gradient(circle at center, #896DBF 30%, #4E1D77 30%, #4E1D77 60%, #42B7B7 60%), #42B7B7;
+}
+body .popwrap:nth-of-type(3):after, body .popwrap:nth-of-type(4):after, body .popwrap:nth-of-type(9):after {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5vw 0 0 rgba(0, 0, 0, 0.15), -2.5vw 0 0 rgba(0, 0, 0, 0.15);
+}
+body .popwrap:nth-of-type(3) .inner .cell:before, body .popwrap:nth-of-type(4) .inner .cell:before, body .popwrap:nth-of-type(9) .inner .cell:before {
+  background: radial-gradient(circle at center, #F67280 30%, #6C5B7B 30%, #6C5B7B 60%, #F8B195 60%), #F8B195;
+}
+body .popwrap .inner {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 0;
+  left: 12.5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: #ff0080;
+  overflow: hidden;
+  border-radius: 50vw 50vw 10vw 10vw;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 8;
+  -webkit-mask: radial-gradient(circle at bottom, #000 34%, transparent 34%) 50% -10vw/100% 100% no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(5vw, transparent), color-stop(5vw, #000));
+  -webkit-mask: radial-gradient(circle at bottom, #000 34%, transparent 34%) 50% -10vw/100% 100% no-repeat, linear-gradient(to bottom, transparent 5vw, #000 5vw);
+          mask: radial-gradient(circle at bottom, #000 34%, transparent 34%) 50% -10vw/100% 100% no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(5vw, transparent), color-stop(5vw, #000));
+          mask: radial-gradient(circle at bottom, #000 34%, transparent 34%) 50% -10vw/100% 100% no-repeat, linear-gradient(to bottom, transparent 5vw, #000 5vw);
+}
+body .popwrap .inner:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  box-shadow: inset 1.5vw 0 0 rgba(0, 0, 0, 0.15);
+  border-radius: inherit;
+  -webkit-animation: backnforth2 3s ease-in-out infinite alternate;
+          animation: backnforth2 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes backnforth2 {
+  to {
+    box-shadow: inset -1.5vw 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+@keyframes backnforth2 {
+  to {
+    box-shadow: inset -1.5vw 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+body .popwrap .inner:after {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  -webkit-transition: -webkit-transform 4s ease-in-out;
+  transition: -webkit-transform 4s ease-in-out;
+  transition: transform 4s ease-in-out;
+  transition: transform 4s ease-in-out, -webkit-transform 4s ease-in-out;
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  -webkit-backdrop-filter: url(#filter);
+          backdrop-filter: url(#filter);
+  z-index: 9;
+  left: -12.5vw;
+  top: -12.5vw;
+}
+body .popwrap .cell {
+  position: relative;
+  z-index: 0;
+}
+body .popwrap .cell:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #40e0d0 30%, #ff8c00 30%, #ff8c00 60%, #ff0080 60%), #ff0080;
+  left: 0;
+  top: 0;
+  -webkit-transform: scale(calc(var(--size) * 0.5)) rotate(var(--angle));
+          transform: scale(calc(var(--size) * 0.5)) rotate(var(--angle));
+  border-radius: var(--radius) var(--radius2) var(--radius3) var(--radius4);
+  -webkit-transition: 4s ease-in-out;
+  transition: 4s ease-in-out;
+}
+body .popwrap .cell:nth-of-type(1):before {
+  -webkit-transition-delay: 0.025s;
+          transition-delay: 0.025s;
+}
+body .popwrap .cell:nth-of-type(2):before {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+body .popwrap .cell:nth-of-type(3):before {
+  -webkit-transition-delay: 0.075s;
+          transition-delay: 0.075s;
+}
+body .popwrap .cell:nth-of-type(4):before {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+body .popwrap .cell:nth-of-type(5):before {
+  -webkit-transition-delay: 0.125s;
+          transition-delay: 0.125s;
+}
+body .popwrap .cell:nth-of-type(6):before {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+body .popwrap .cell:nth-of-type(7):before {
+  -webkit-transition-delay: 0.175s;
+          transition-delay: 0.175s;
+}
+body .popwrap .cell:nth-of-type(8):before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+body .popwrap .cell:nth-of-type(9):before {
+  -webkit-transition-delay: 0.225s;
+          transition-delay: 0.225s;
+}
+body svg {
+  position: absolute;
+}
